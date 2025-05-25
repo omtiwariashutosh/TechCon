@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conference Header with Register Button</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" style="font-family: 'EB Garamond';" href="#home">TechCon 26</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav align-items-center">
+                        <a class="nav-link px-3 active" href="#home">Home</a>
+                        <a class="nav-link px-3" href="#about">About</a>
+                        <a class="nav-link px-3" href="#speakers">Speakers</a>
+                        <a class="nav-link px-3" href="#schedule">Schedule</a>
+                        <a class="nav-link px-3" href="#contact">Contact</a>
+                        <a href="javascript:void(0);" onclick="toggleRegister()"
+                            class="btn btn-primary ms-3">Register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- nav bar ends here -->
+
+    <section id="home" class="container-fluid p-0 mb-5">
+        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-overlay">
+                        <img class="w-100 hero-img" src="img/hero.jpg" alt="Conference Image">
+                    </div>
+                    <div
+                        class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
+                        <h2 class="text-white fw-semibold" style="font-family: '';">Join the Future of Innovation</h2>
+                        <h1 class="display-1 text-white fw-bold" style="font-family: '';">ConfX Summit 2025</h1>
+                        <h4 class="text-white mb-4">Explore. Connect. Elevate.</h4>
+                        <a href="javascript:void(0);" onclick="toggleRegister()"
+                            class="btn btn-primary ms-3">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/about.avif" alt="ConfX Conference" class="img-fluid rounded shadow-sm w-100" />
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="col-lg-6">
+                    <h2 class="text-primary fw-bold mb-3">About ConfX Summit 2025</h2>
+                    <p class="lead text-muted">
+                        ConfX Summit is a global conference that unites technology enthusiasts, entrepreneurs,
+                        researchers, and innovators to explore tomorrow's ideas today.
+                    </p>
+
+                    <p class="text-muted">
+                        Join over 2,000 attendees in a 3-day experience filled with keynote talks, panel discussions,
+                        workshops, and live demos from the brightest minds in tech.
+                    </p>
+
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2"><i class="fas fa-microphone-alt text-danger me-2"></i>50+ Renowned Speakers
+                        </li>
+                        <li class="mb-2"><i class="fas fa-people-arrows text-success me-2"></i>Global Networking
+                            Opportunities</li>
+                        <li class="mb-2"><i class="fas fa-laptop-code text-primary me-2"></i>Hands-on Innovation Labs
+                        </li>
+                        <li class="mb-2"><i class="fas fa-lightbulb text-warning me-2"></i>Inspiring Startup Showcases
+                        </li>
+                    </ul>
+
+                    <a href="javascript:void(0);" onclick="toggleRegister()"
+                        class="btn btn-danger px-4 py-2 mt-3 rounded-pill">Register</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Attend Section -->
+    <section id="why-attend" class="py-5 position-relative">
+        <!-- Background Image -->
+        <div class="why-attend-bg"></div>
+
+        <!-- Overlay for blur and color -->
+        <div class="why-attend-overlay"></div>
+
+        <!-- Foreground Content -->
+        <div class="container text-center position-relative text-white">
+            <h2 class="fw-bold mb-4">Why Attend ConfX Summit?</h2>
+            <p class="mb-5 lead">Discover the top reasons to be a part of the most impactful conference of the year.</p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card bg-transparent border-0 shadow h-100 p-4 text-white">
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-lightbulb fa-3x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Innovative Ideas</h5>
+                        <p>Gain insights into the latest trends and disruptive innovations shaping the future.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-transparent border-0 shadow h-100 p-4 text-white">
+                        <div class="mb-3 text-danger">
+                            <i class="fas fa-network-wired fa-3x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Global Networking</h5>
+                        <p>Connect with industry leaders, experts, and peers from around the globe.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-transparent border-0 shadow h-100 p-4 text-white">
+                        <div class="mb-3 text-success">
+                            <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Expert Sessions</h5>
+                        <p>Learn from the best through panels, workshops, and real-world case studies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="speakers" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="text-primary fw-bold mb-5">Meet Our Speakers</h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm border-0 rounded-3">
+                        <img src="img/speaker1.jpg" class="card-img-top rounded-top" alt="Speaker 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Emma Carter</h5>
+                            <p class="text-muted mb-2">AI Researcher, Tech University</p>
+                            <p class="card-text">Emma is a pioneer in machine learning and AI ethics with over 10 years
+                                of experience.</p>
+                            <div>
+                                <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm border-0 rounded-3">
+                        <img src="img/speaker2.jpg" class="card-img-top rounded-top" alt="Speaker 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr. Rajesh Singh</h5>
+                            <p class="text-muted mb-2">Founder, InnovateX</p>
+                            <p class="card-text">Rajesh leads cutting-edge startups focusing on blockchain and
+                                decentralized systems.</p>
+                            <div>
+                                <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-medium fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm border-0 rounded-3">
+                        <img src="img/speaker3.jpg" class="card-img-top rounded-top" alt="Speaker 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Ms. Lina Martinez</h5>
+                            <p class="text-muted mb-2">CTO, FutureTech Labs</p>
+                            <p class="card-text">Lina specializes in cloud computing and AI-driven automation.</p>
+                            <div>
+                                <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-facebook fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Join Us Section -->
+    <section id="join-us" class="join-us-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Left: Call to Action -->
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+                    <h2 class="join-title">Don't Miss TechCon 26!</h2>
+                    <p class="join-desc">Join thousands of tech leaders, innovators, and creators at the most exciting
+                        tech event of the year.</p>
+                    <button onclick="toggleRegister()" class="btn btn-primary join-btn">Register Now</button>
+                </div>
+
+                <!-- Right: Newsletter Subscription -->
+                <div class="col-lg-5">
+                    <h5 class="newsletter-title">Subscribe to Our Newsletter</h5>
+                    <form class="newsletter-form"
+                        onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-outline-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="schedule" class="py-5">
+        <div class="container">
+            <h2 class="text-primary fw-bold text-center mb-5">Conference Schedule</h2>
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+                    <ul class="list-group schedule-list">
+                        <li class="list-group-item">
+                            <div class="schedule-time">
+                                <i class="far fa-clock"></i> 09:00 AM - 10:00 AM
+                            </div>
+                            <div class="schedule-details">
+                                <h5><i class="fas fa-microphone-alt"></i> Opening Keynote: The Future of Tech</h5>
+                                <small>Dr. Emma Carter</small>
+                                <p>Kick off the summit with an inspiring talk on innovation and technology trends.</p>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="schedule-time">
+                                <i class="far fa-clock"></i> 10:15 AM - 11:00 AM
+                            </div>
+                            <div class="schedule-details">
+                                <h5><i class="fas fa-chalkboard-teacher"></i> Workshop: AI in Everyday Life</h5>
+                                <small>Mr. Rajesh Singh</small>
+                                <p>Hands-on session exploring AI applications and tools you can use right now.</p>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="schedule-time">
+                                <i class="far fa-clock"></i> 11:15 AM - 12:00 PM
+                            </div>
+                            <div class="schedule-details">
+                                <h5><i class="fas fa-users"></i> Panel Discussion: Ethics in Tech</h5>
+                                <small>Lina Martinez & Guests</small>
+                                <p>A lively debate on the responsibilities and challenges in modern technology.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-primary fw-bold text-center mb-5">Get in Touch</h2>
+            <div class="row g-4">
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="card shadow-sm p-4">
+                        <h4 class="mb-4">Send Us a Message</h4>
+                        <form id="contactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label fw-semibold">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your full name"
+                                    required />
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                                    required />
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label fw-semibold">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required />
+                                <div class="invalid-feedback">Please enter a subject.</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label fw-semibold">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Your message..."
+                                    required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-5 fw-bold">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-5">
+                    <div class="card shadow-sm p-4 h-100">
+                        <h4 class="mb-4">Contact Information</h4>
+                        <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <strong>Address:</strong><br />
+                            123 Innovation Drive,<br />Tech City, CA 94016,<br />United States
+                        </p>
+                        <p class="mb-3"><i class="fas fa-phone-alt text-primary me-3"></i> <strong>Phone:</strong><br />
+                            +1 (555) 123-4567<br />
+                            +1 (555) 987-6543</p>
+                        <p class="mb-3"><i class="fas fa-envelope text-primary me-3"></i> <strong>Email:</strong><br />
+                            contact@confxsummit.com</p>
+                        <p class="mb-3"><i class="fas fa-globe text-primary me-3"></i> <strong>Website:</strong><br />
+                            www.confxsummit.com</p>
+
+                        <div class="mt-4">
+                            <h5 class="fw-bold mb-3">Follow Us</h5>
+                            <a href="#" class="me-3 text-primary fs-4"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3 text-primary fs-4"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="me-3 text-primary fs-4"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-primary fs-4"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-top py-5">
+            <div class="container">
+                <div class="row">
+
+                    <!-- About -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="footer-title">ConfX Summit 2025</h5>
+                        <p>Leading innovation, connection, and growth. Join us and be part of the future!</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-2 mb-4">
+                        <h6 class="footer-title">Quick Links</h6>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#why-attend">Why Attend</a></li>
+                            <li><a href="#speakers">Speakers</a></li>
+                            <li><a href="#schedule">Schedule</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="footer-title">Contact Us</h6>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 456 Innovation Blvd, Tech City, USA</p>
+                        <p><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@confxsummit.com</p>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="footer-title">Follow Us</h6>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-center py-3">
+            <small>© 2025 ConfX Summit. All rights reserved. | Best wishes from the ConfX Team 🚀</small>
+        </div>
+    </footer>
+    <!-- Extended Register Section (Hidden by default) -->
+    <div id="register" class="register-overlay" style="display: none; ">
+        <div class="register-form" id="registerForm">
+            <button class="btn-close" aria-label="Close" onclick="toggleRegister()"></button>
+            <h2>Register for TechCon 26</h2>
+
+            <form id="registrationForm" method="POST" action="register.php">
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Organization / Company*</label>
+                    <input type="text" id="organization" name="organization" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="designation">Designation / Role*</label>
+                    <input type="text" id="designation" name="designation" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="location">City & Country*</label>
+                    <input type="text" id="location" name="location" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Area of Interest*</label>
+                    <select id="interest" name="interest" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option>AI & ML</option>
+                        <option>Web Development</option>
+                        <option>Cybersecurity</option>
+                        <option>DevOps</option>
+                        <option>Cloud Computing</option>
+                        <option>Blockchain</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Why do you want to attend TechCon 26?</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Tell us briefly..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleRegister() {
+            const reg = document.getElementById("register");
+            reg.style.display = reg.style.display === "flex" ? "none" : "flex";
+        }
+
+        // Escape key to close
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                document.getElementById("register").style.display = "none";
+            }
+        });
+    </script>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
